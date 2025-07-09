@@ -16,7 +16,7 @@ for (i in 1:nrow(map_config$layers)) {
   layer_shaid <- map_config$layers[i, "data"][["value"]]
   layer_name <- map_config$layers[i, "name"]
   matrix_data_file <- file.path("data_layers", layer_shaid, "matrix.tsv")
-  message(paste("Processing layer:", layer_name, ", from file:", matrix_data_file))
+  message(paste("Processing layer:", layer_name))
   matrix_data <- as.matrix(read.csv(matrix_data_file, sep="\t", header = TRUE,
                                     row.names = 1, check.names = FALSE, stringsAsFactors = FALSE))
   colors <- map_config$renderers["points"][[1]][[i]]$color
