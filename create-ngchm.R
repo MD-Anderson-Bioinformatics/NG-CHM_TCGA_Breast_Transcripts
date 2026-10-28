@@ -49,6 +49,7 @@ for (row_or_col in c("row", "col")) {
   }
 }
 
+hm <- chmAddProperty(hm, 'cbioportal.study', 'brca_tcga_pub')
 
 #
 # Add axis types.
